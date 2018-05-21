@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Essais JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+    <h1> Les exercices de Polo</h1>
+        <!-- Fonction Array-->
+    <section>     
+        <h3>Retourner le nombre maximum d'une array [1, 2, 3, 4]</h3>
+            <strong><p id="array" style="color: green"></p></strong>
+            <code>function my_max() {<br>
+                    var numbers = [1, 2, 3, 4];<br>
+                    return Math.max(...numbers)<br>
+                }<br>
+                <br>
+            </code>
+    </section>
+    <hr>
+    <!-- Fonction Voyelles-->
+    <section>     
+        <h3>Nombre de voyelles de la phrase "coucou ahahah"</h3>
+            <strong><p id="vowel" style="color: green"></p></strong>
+            <code>
+                    function vowel_count(str){<br>
+
+                        var m = str.match(/[aeiou]/gi);<br>
+                    <u>// utilisation d'un regex qui prend les voyelles (g pour toute la string, i pour que ce soit case-sensitive</u><br>
+                    return m === null ? 0 : m.length;<br>
+                        <u>//retourne le nombre de matchs</u><br>
+                        return vowelsCount;<br>
+                        
+                        }<br>
+            </code>
+    </section>
+    <hr>
+
+    <!-- Fonction Reverse-->
+    <section>     
+            <h3>Fonction pour reverse les lettres de la phrase "hello le monde"</h3>
+                <strong><p id="reverse" style="color: green"></p></strong>
+                <code>
+                        function reverse(str) {<br>
+                            return str.split("").reverse().join("");<br>
+                            <u>// Split retourne un array</u><br>
+                           <u>// Reverse créer un nouvel array avec les lettres inversées</u> <br>
+                            <u>// Join permet de joindre les lettres de l'array</u><br>
+                        }<br>
+                </code>
+    </section>
+
+<section>
+        <hr>
+
+    <br>
+    <h3>La jolie calculatrice des familles</h3>
+
+        <center>
+                <table>
+                <tr>
+                    <th colspan=4><h1>Calculatrice de la mort</h1></th>
+                </tr>
+                <tr >
+                    <td colspan=4><input type="text" id="text1" placeholder="0" style="text-align:right;"/></td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" value="/" onClick="event1(this.value)">/</button></td>
+                    <td><button type="button" value="*"  onClick="event1(this.value)">*</button></td>
+                    <td><button type="button" value="-"  onClick="event1(this.value)">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="7" onClick="event1(this.value)">7</button></td>
+                    <td><button type="button" value="8" onClick="event1(this.value)">8</button></td>
+                    <td><button type="button" value="9" onClick="event1(this.value)">9</button></td>
+                    <td rowspan=2><button type="button" value="+" style="height:50px;" onClick="event1(this.value)">+</td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="4" onClick="event1(this.value)">4</button></td>
+                    <td><button type="button" value="5" onClick="event1(this.value)">5</button></td>
+                    <td><button type="button" value="6" onClick="event1(this.value)">6</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="1" onClick="event1(this.value)">1</button></td>
+                    <td><button type="button" value="2" onClick="event1(this.value)">2</button></td>
+                    <td><button type="button" value="3" onClick="event1(this.value)">3</button></td>
+                    <td rowspan=2><button type="button" style="height:48px;"  onClick="event2()" >=</button></td>
+                </tr>
+                <tr>
+                    <td colspan=2><button type="button" style="width:100%">0</button></td>
+                    <td><button type="button">.</button></td>
+                </tr>
+                </table>
+                </center>
+                <br>
+                <br>
+
+                <code>
+                        function event1(x){<br>
+                            &nbsp document.getElementById("text1").value+=x;
+                        }<br>
+                        // Récupère l'élement par l'identifiant et sa value. += correspond à value = value+x<br>
+                        // J'utilise this.value pour assigner la valeur de la touche et lui faire passer ma fonction event1<br>
+                        <br>
+                        function event2(){<br>
+                           &nbsp var x = document.getElementById("text1").value;<br>
+                           &nbsp document.getElementById("text1").value = eval(x);<br>
+                        }<br>
+                        // La fonction eval évalue l'expression entrée, ici x, la valeur entrée par le bouton<br>
+                        // Du coup ça me permet de juste récupérer un chiffre ou une string ou de faire le calcul à la volée ;) <br>
+                </code>
+                
+</section>
+
+
+
+
+    
+</body>
+<script src="script.js"></script>
+</html>
