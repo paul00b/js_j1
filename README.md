@@ -17,5 +17,5 @@ OUI, je sais, j'ai pas les mêmes fonctions que celles demandées. Un bon dével
 * Buy a car to my dad
 * Drink more beer
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/AsVdSicpGpY?=0autoplay" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/AsVdSicpGpY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
